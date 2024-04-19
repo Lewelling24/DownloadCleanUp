@@ -1,5 +1,5 @@
 import webbrowser #using webbrowser for cross platform
 
-path = 'C:/Users/kanel/Downloads'
+path = 'Your path here'
 
 webbrowser.open('file:///' + path)
