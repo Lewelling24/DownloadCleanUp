@@ -1,8 +1,11 @@
-import webbrowser #using webbrowser for cross platform
+import os # writing for windows as that is what I have
 
 path = 'Your path here'
 
 
 document_extensions = [".docx", ".txt", ".pdf"]
 
-webbrowser.open('file:///' + path)
+contents = os.listdir(path)
+
+for item in contents:
+    print(item)
