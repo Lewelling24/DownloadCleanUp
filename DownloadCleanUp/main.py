@@ -1,6 +1,6 @@
-import os # writing for windows as that is what I have
+import os # writing for windows
 
-path = 'your path here'
+path = 'Youre path here'
 
 
 document_extensions = [".docx", ".txt", ".pdf"]
@@ -8,5 +8,6 @@ document_extensions = [".docx", ".txt", ".pdf"]
 contents = os.listdir(path)
 
 for item in contents:
-    if(item.endswith(document_extensions[2])):
-        print(item)
+    for i in document_extensions:
+        if(item.endswith(i)):
+            print(item)
