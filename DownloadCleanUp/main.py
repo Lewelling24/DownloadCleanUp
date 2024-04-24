@@ -1,7 +1,11 @@
 import os # writing for windows
 
-path = ''
-
+downloads_path = ''
+text_file_path = ''
+image_file_path = ''
+audio_file_path = ''
+video_file_path = ''
+executable_file_path = ''
 
 text_extensions = [".docx", ".txt", ".pdf", ".doc"]
 
@@ -16,9 +20,9 @@ executable_extensions = [".exe", ".jar", ".zip"]
 compressed_extensions = [".zip", ".rar", ".tar", ".gz"]
 
 
-contents = os.listdir(path)
+contents = os.listdir(downloads_path)
 
 for item in contents:
     for i in text_extensions:
         if(item.endswith(i)):
-            os.remove(path + '/' + item)
+            os.remove(downloads_path + '/' + item)
