@@ -26,6 +26,9 @@ contents = os.listdir(downloads_path)
 
 # deleting compressed files
 for item in contents:
+    if item in text_extensions:
+        print(item)
+
     for i in compressed_extensions:
         if(item.endswith(i)):
             os.remove(downloads_path + '/' + item)
