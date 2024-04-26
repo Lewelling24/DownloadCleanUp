@@ -28,6 +28,17 @@ contents = os.listdir(downloads_path)
 for item in contents:
     if item in text_extensions:
         print(item)
+    elif item in image_extensions:
+        print(item)
+    elif item in audio_extensions:
+        print(item)
+    elif item in video_extensions:
+        print(item)
+    elif item in executable_extensions:
+        print(item)
+    elif item in compressed_extensions:
+        print(item)
+
 
     for i in compressed_extensions:
         if(item.endswith(i)):
