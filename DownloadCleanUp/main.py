@@ -25,9 +25,7 @@ compressed_extensions = [".zip", ".rar", ".tar", ".gz"]
 contents = os.listdir(downloads_path)
 
 # deleting compressed files
-# This ain't gonna work need to fix
 for item in contents:
-
     for i in text_extensions:
         if(item.endswith(i)):
             os.remove(downloads_path + '/' + item)
