@@ -25,21 +25,29 @@ compressed_extensions = [".zip", ".rar", ".tar", ".gz"]
 contents = os.listdir(downloads_path)
 
 # deleting compressed files
+# This ain't gonna work need to fix
 for item in contents:
-    if item in text_extensions:
-        print(item)
-    elif item in image_extensions:
-        print(item)
-    elif item in audio_extensions:
-        print(item)
-    elif item in video_extensions:
-        print(item)
-    elif item in executable_extensions:
-        print(item)
-    elif item in compressed_extensions:
-        print(item)
 
+    for i in text_extensions:
+        if(item.endswith(i)):
+            os.remove(downloads_path + '/' + item)
 
+    for i in image_extensions:
+        if(item.endswith(i)):
+            os.remove(downloads_path + '/' + item)
+
+    for i in audio_extensions:
+        if(item.endswith(i)):
+            os.remove(downloads_path + '/' + item)
+
+    for i in video_extensions:
+        if(item.endswith(i)):
+            os.remove(downloads_path + '/' + item)
+
+    for i in executable_extensions:
+        if(item.endswith(i)):
+            os.remove(downloads_path + '/' + item)
+    
     for i in compressed_extensions:
         if(item.endswith(i)):
             os.remove(downloads_path + '/' + item)
