@@ -51,3 +51,6 @@ for item in contents:
     for i in compressed_extensions:
         if(item.endswith(i)):
             os.remove(downloads_path + '/' + item)
+
+    def document_file_removal():
+        
