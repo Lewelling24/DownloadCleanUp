@@ -25,32 +25,32 @@ compressed_extensions = [".zip", ".rar", ".tar", ".gz", ".iso"]
 contents = os.listdir(downloads_path)
 
 
-for item in contents:
-    for i in text_extensions:
-        if(item.endswith(i)):
-            shutil.move(downloads_path + '/' + item, text_file_path + '/' + item)
+def file_removal(contents):
+    for item in contents:
+        for i in text_extensions:
+            if(item.endswith(i)):
+                shutil.move(downloads_path + '/' + item, text_file_path + '/' + item)
 
-    for i in image_extensions:
-        if(item.endswith(i)):
-            shutil.move(downloads_path + '/' + item, image_file_path + '/' + item)
+        for i in image_extensions:
+            if(item.endswith(i)):
+                shutil.move(downloads_path + '/' + item, image_file_path + '/' + item)
 
-    for i in audio_extensions:
-        if(item.endswith(i)):
-            shutil.move(downloads_path + '/' + item, audio_file_path + '/' + item)
+        for i in audio_extensions:
+            if(item.endswith(i)):
+                shutil.move(downloads_path + '/' + item, audio_file_path + '/' + item)
 
-    for i in video_extensions:
-        if(item.endswith(i)):
-            shutil.move(downloads_path + '/' + item, video_file_path + '/' + item)
+        for i in video_extensions:
+            if(item.endswith(i)):
+                shutil.move(downloads_path + '/' + item, video_file_path + '/' + item)
 
-    # deleting executable files. i.e. installers
-    for i in executable_extensions:
-        if(item.endswith(i)):
-            os.remove(downloads_path + '/' + item)
-    
-    # deleting compressed files
-    for i in compressed_extensions:
-        if(item.endswith(i)):
-            os.remove(downloads_path + '/' + item)
-
-    def document_file_removal():
+        # deleting executable files. i.e. installers
+        for i in executable_extensions:
+            if(item.endswith(i)):
+                os.remove(downloads_path + '/' + item)
         
+        # deleting compressed files
+        for i in compressed_extensions:
+            if(item.endswith(i)):
+                os.remove(downloads_path + '/' + item)
+
+file_removal(contents)
